@@ -15,13 +15,17 @@ const Header = () => {
 };
 
 const Button = ({ Content }) => {
-  return <div className="align-middle font-inter">{Content}</div>;
+  return (
+    <div className="pointer-events-none align-middle font-inter text-sm text-gray-400">
+      {Content}
+    </div>
+  );
 };
 
 const SpecialButton = ({ Content }) => {
   return (
-    <div className="special-button font-inter">
-      <div className="fixed top-0"> {Content} </div>
+    <div className="special-button font-inter text-sm text-gray-400">
+      <div className="pointer-events-none m-auto"> {Content} </div>
     </div>
   );
 };

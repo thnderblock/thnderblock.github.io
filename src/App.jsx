@@ -31,6 +31,7 @@ function App() {
             Passionate about graphics design and illustration.
           </div>
         </div>
+        <div className="flex w-screen justify-center"> suprise</div>
       </div>
     </>
   );
