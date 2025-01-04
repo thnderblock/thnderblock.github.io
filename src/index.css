@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  :root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --gray: #f0f0f0;
+  }
+
+  .special-button {
+    background-color: var(--gray);
+    justify-content: center;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    position: relative;
+    /* border: 1px solid black; */
+  }
+
+  .special-button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: var(--blue);
+    filter: blur(0.5rem);
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .special-button:hover {
+    border: 1px solid var(--blue);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .special-button:hover::after {
+    opacity: 0.5;
+  }
+}
