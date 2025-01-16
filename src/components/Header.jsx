@@ -1,40 +1,29 @@
-/* eslint-disable react/prop-types */
 const Header = () => {
   return (
-    <div className="fixed flex h-12 w-screen justify-between bg-white px-8 leading-[3rem] shadow-md ">
-      <Logo />
-
-      <div className="flex h-full w-96 flex-row items-center justify-evenly">
-        <Button Content={"Home"} />
-        <Button Content={"LinkedIn"} />
-        <Button Content={"Resume"} />
-        <SpecialButton Content={"Contact"} />
+    <>
+      <div className="sticky top-0 z-[100] flex h-12 w-full justify-between bg-white bg-opacity-50 px-8 backdrop-blur">
+        <div className="flex h-full w-36 items-center">
+          <div className="font-inter italic">Nicholas Tong</div>
+        </div>
+        <div className="h-full flex-row items-center justify-evenly pl-12 font-inter lg:flex lg:gap-12">
+          <a href="/" className="hidden lg:block">
+            Home
+          </a>
+          <a href="/" className="hidden lg:block">
+            Resume
+          </a>
+          <div className="flex h-full items-center">
+            <a href="/"> Contact Me </a>
+          </div>
+        </div>
+        <div className="hidden lg:block">
+          <div className="flex h-full items-center">
+            <div className="w-36 text-right font-inter italic">Portfolio</div>
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
-
-const Button = ({ Content }) => {
-  return (
-    <div className="pointer-events-none align-middle font-inter text-sm text-gray-400">
-      {Content}
-    </div>
-  );
-};
-
-const SpecialButton = ({ Content }) => {
-  return (
-    <div className="special-button font-inter text-sm text-gray-400">
-      <div className="pointer-events-none m-auto"> {Content} </div>
-    </div>
-  );
-};
-
-const Logo = () => {
-  return (
-    <div className="my-3 flex h-6 w-6 items-center justify-center rounded-full bg-gray-200 align-middle font-gilda text-sm">
-      NT
-    </div>
+      {/* <div className="h-full w-full bg-white bg-opacity-50 blur-lg"></div> */}
+    </>
   );
 };
 
