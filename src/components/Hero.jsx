@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="relative flex w-full items-center justify-center lg:w-1/2 lg:flex-row">
           <div className="absolute right-80 top-44 z-20 h-96 w-96 rounded-full bg-blue-400 opacity-25 blur-3xl"></div>
           <div className="absolute right-0 top-10 z-10 h-[34rem] w-[34rem] rounded-full bg-purple-300 opacity-30 blur-3xl"></div>
-          <div className="ml-auto mr-auto flex w-[31rem] flex-col pt-28 font-inter lg:mr-0 lg:pt-0">
+          <div className="ml-auto mr-auto flex w-[33.5rem] flex-col pt-28 font-inter lg:mr-0 lg:pt-0">
             <motion.div
               style={{ y: sm }}
               className="z-30 text-6xl font-semibold italic tracking-tight"
@@ -34,7 +34,7 @@ const Hero = () => {
               className=" z-30 ml-auto mr-2 mt-4  text-right italic"
             >
               Hi I’m Nick, I work on robotics, automation, and software. <br />
-              Currently a final year student studying at UNSW!q
+              Currently a final year student studying at UNSW!
             </motion.div>
             <motion.div style={{ y: lg }} className="ml-auto mr-2 flex">
               <a
