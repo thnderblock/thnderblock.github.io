@@ -3,8 +3,7 @@ import { useScroll, useTransform, motion } from "motion/react";
 
 import ur from "../images/ur5e-2-md.png";
 
-// eslint-disable-next-line react/prop-types
-const Hero = ({ globalScrollYProgress }) => {
+const Hero = () => {
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,13 +15,6 @@ const Hero = ({ globalScrollYProgress }) => {
   const md = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const lg = useTransform(scrollYProgress, [0, 1], [0, -60]);
   const xl = useTransform(scrollYProgress, [0, 1], [0, -120]);
-
-  const scaleForward = useTransform(globalScrollYProgress, [0, 1], [-300, 300]);
-  const scaleBackward = useTransform(
-    globalScrollYProgress,
-    [0, 1],
-    [500, -500],
-  );
 
   return (
     <div ref={ref} className="flex h-screen w-full flex-col gap-5 bg-slate-50">
@@ -67,23 +59,6 @@ const Hero = ({ globalScrollYProgress }) => {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        style={{ x: scaleForward }}
-        className="whitespace-nowrap text-3xl font-semibold italic tracking-tight"
-      >
-        {"Mechatronics & Computer Science & Graphic Design & Digital Art ".repeat(
-          10,
-        )}
-      </motion.div>
-      <motion.div
-        style={{ x: scaleBackward, translateX: "-40%" }}
-        className="whitespace-nowrap text-3xl font-semibold italic tracking-tight"
-      >
-        {"Mechatronics & Computer Science & Graphic Design & Digital Art ".repeat(
-          10,
-        )}
-      </motion.div>
     </div>
   );
 };
